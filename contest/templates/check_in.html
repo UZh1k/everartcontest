@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'contest/check.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{exhib_visited}}/3 конкурс</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <br>
+            <div align="center" class="row">
+                <div class="col s4">
+                    <h2>
+                        <span class="hl" style="font-family: Circe;"><b>{{exhib_visited}}/3</b></span>
+                    </h2>
+                </div>
+                <div class="col s8">
+                    <img width="200" src="/static/obschaya_kartinka_eaw.png">
+                </div>
+            </div>
+
+            <div class="div_text" align="center">
+                <p>
+                    <b>ВЫ ПОСЕТИЛИ СОБЫТИЕ<br>
+                        <span class="hl">{{ exhib.title }}</span>
+                    </b>
+                </p>
+                <br>
+                <p>
+                    ОТСКАНИРУЙТЕ <span class="hl">ЕЩЕ {% if exhib_visited == 1 %}2 QR-КОДА{% else %}1 QR-КОД{% endif %}</span>
+                    В ГАЛЕРЕЯХ-УЧАСТИНАКАХ ФЕСТИВАЛЯ EVERART WEEKEND И ПРИМИТЕ <span class="hl">УЧАСТИЕ В КОНКУРСЕ</span>,
+                    организованного при поддержке нашего генерального партнера <span class="hl">«СБЕРСПАСИБО»</span>!
+                </p>
+                <p>
+                    <b>
+                        ЧТО МОЖНО ВЫИГРАТЬ?
+                    </b>
+                </p>
+                <p>
+                    ПЕРВЫЕ <span class="hl">3 ПОБЕДИТЕЛЯ</span> ПОЛУЧАТ В ПОДАРОК <span class="hl">РАБОТЫ ХУДОЖНИКОВ</span> ОЛЬГИ ЕЛИСЕЕВОЙ, АЛЕНОЙ ФЕДОТКИНОЙ, МАКСЕТТА ПРИБЫЛОВА.
+                </p>
+                <p>
+                    СЛЕДУЮЩИЕ <span class="hl">10</span> — ФИРМЕННЫЕ <span class="hl">ФУТБОЛКИ EVERART <br>WEEKEND X СБЕРСПАСИБО</span>.
+                </p>
+                <p>
+                    Ищите подробности в нашем инстаграм <a href="https://www.instagram.com/everart_weekend/" class="hl">@everart_weekend</a>!
+                </p>
+                <br>
+                <br>
+                <a href="{{exhib.link}}" style="background-color: #05FFD3; border-color: #05FFD3; padding: 8px 30px;">
+                    <span style="color: #000000">Узнать больше о событии</span>
+                </a>
+                <br><br>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div align="center" style="font-family: Circe; font-size: 80%; margin-top: 5px; margin-bottom: 5px">
+            Генеральный партнер<br>
+            <img src="/static/sber.png" width="65" style="margin: 5px"><br>
+            <span style="font-size: 50%">«СберСпасибо» - ПАО Сбербанк, Генеральная лицензия Банка России на осуществление банковских операций № 1481 от 11.08.2015</span>
+        </div>
+    </footer>
+</body>
+</html>
